@@ -35,6 +35,7 @@ public class UserService {
         return User.toModel(savedUser);
     }
 
+
     @Operation(summary = "Получение пользователя", description = "Возвращает пользователя по идентификатору.")
     public User getUser(@Parameter(description = "Идентификатор пользователя") Long id) throws UserNotFoundException {
         UserEntity userEntity = userRepo.findById(id)
